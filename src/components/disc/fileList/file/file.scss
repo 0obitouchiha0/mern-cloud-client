@@ -1,0 +1,90 @@
+@import '../../../../utils/colors';
+
+.file {
+  margin: 10px 0;
+  border-bottom: 1px solid $fontColor;
+  display: grid;
+  grid-template-columns: 1fr 4fr repeat(4, 1fr);
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &__img {
+    justify-self: center;
+  }
+
+  &__name {
+    grid-column-start: 2;
+    font-family: Roboto;
+  }
+
+  &__date {
+    grid-column-start: 5;
+    justify-self: center;
+    font-family: Roboto;
+  }
+
+  &__size {
+    grid-column-start: 6;
+    justify-self: center;
+    font-family: Roboto;
+  }
+
+  &__btn {
+    display: none;
+  }
+
+  &:hover &__date {
+    grid-column-start: 3;
+  }
+
+  &:hover &__size {
+    grid-column-start: 4;
+  }
+
+  &:hover &__download {
+    display: block;
+    grid-column-start: 5;
+  }
+
+  &:hover &__delete {
+    display: block;
+    grid-column-start: 6;
+  }
+}
+
+
+.file-plate {
+  &__item {
+    width: 100px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    &:hover .file-plate__btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+      grid-gap: 5px;
+    }
+  }
+
+  &__name {
+    text-align: center;
+    font-family: Roboto;
+  }
+
+  &__btns {
+    display: none;
+  }
+
+  &__delete, &__download {
+    background-color: transparent;
+    border: 1px solid $fontColor;
+    padding: 2px;
+    cursor: pointer;
+  }
+}

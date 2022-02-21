@@ -1,0 +1,14 @@
+@import '../colors.scss';
+
+input {
+  border: none;
+  border-bottom: $fontColor solid 2px;
+  background: transparent;
+  padding: 5px;
+  outline: none;
+  &::placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    color: $fontColor;
+  }
+}

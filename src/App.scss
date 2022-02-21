@@ -1,0 +1,16 @@
+@import "./utils/colors";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  background-color: $backgroundColor;
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+}
